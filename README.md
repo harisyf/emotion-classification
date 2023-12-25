@@ -18,7 +18,8 @@ Library that I used for this project are below.
 * unicodedata
 * textblob
 * sklearn
-* import numpy as np
+
+
 Note: In order to speed up your training process you will need to use the GPU since using CPU only will likely to take a long time.
 
 # Project Structure
@@ -40,15 +41,17 @@ There are several steps in this project as stated below:
   1. Histogram of Text Length
      
      With histogram, we could get information about the distribution of text length. We also make statistics descriptive about our text.
-     
+     ![Histogram of Text Length.](images/histogram-text.png)
 
   3. Wordcloud
 
      Wordcloud is a visualization that showing the most frequent words. We create wordcloud based on the every emotion classes.
+     ![Wordcloud Based on Emotion.](images/wordcloud-emotion.png)
 
-  4. Emotion Counts
+  5. Emotion Counts
  
      With bar plot, we can visualize how many text in every emotion classes.
+     ![Emotion Counts Bar Plot.](images/bar-plot-emotion.png)
  
 
 * Data Preparation
@@ -57,12 +60,18 @@ There are several steps in this project as stated below:
 * Classification Modelling
   
   The next step is building the classification model. We are going to use embedding layer for the input, 3 layers of LSTM, 1 dropout layer, 2 dense layer, and last is the output dense layer.
+  ![Model Summary.](images/model-summary.png)
+
 * Model Evaluation
 
   Model evaluation from the results of the training process is shown by creating accuracy plots and loss plots for training and validation.
+  ![Model Evaluation.](images/model-eval.png)
 * Model Testing
 
-  Last, we should test our model with unseen data by using this function below. To test the model we can create a new text input. We create a function to preprocess the text that we inputted. Then we predict the processed inputted text with our model to determine its emotion. 
+  Last, we should test our model with unseen data by using this function below. To test the model we can create a new text input. We create a function to preprocess the text that we inputted. Then we predict the processed inputted text with our model to determine its emotion.
+  
+  We input text = 'I feel sad' and below is the prediction results.
+  ![Model Prediction.](images/model-pred.png)
 
 You may check my notebook for the detail of every steps.
 
